@@ -1,23 +1,26 @@
 
 package javamodel;
 
-
+import java.sql.Date;
+        
 public class ModelKhachHang {
       private int MaKH ;
       private String tenKH ;
-      private String ngayThamGia ;
+      private Date ngayThamGia ;
       private int doanhSo ;
+      private int diemTichLuy;
       private int userID ;
-      private String loaiKhachHang ;
+      private int loaiKhachHang ;
 
     public ModelKhachHang() {
     }
 
-    public ModelKhachHang(int MaKH, String tenKH, String ngayThamGia, int doanhSo, int userID, String loaiKhachHang) {
+    public ModelKhachHang(int MaKH, String tenKH, Date ngayThamGia, int doanhSo, int diemTichLuy, int userID, int loaiKhachHang) {
         this.MaKH = MaKH;
         this.tenKH = tenKH;
         this.ngayThamGia = ngayThamGia;
         this.doanhSo = doanhSo;
+        this.diemTichLuy = diemTichLuy;
         this.userID = userID;
         this.loaiKhachHang = loaiKhachHang;
     }
@@ -38,11 +41,11 @@ public class ModelKhachHang {
         this.tenKH = tenKH;
     }
 
-    public String getNgayThamGia() {
+    public Date getNgayThamGia() {
         return ngayThamGia;
     }
 
-    public void setNgayThamGia(String ngayThamGia) {
+    public void setNgayThamGia(Date ngayThamGia) {
         this.ngayThamGia = ngayThamGia;
     }
 
@@ -54,6 +57,14 @@ public class ModelKhachHang {
         this.doanhSo = doanhSo;
     }
 
+    public int getDiemTichLuy() {
+        return diemTichLuy;
+    }
+
+    public void setDiemTichLuy(int diemTichLuy) {
+        this.diemTichLuy = diemTichLuy;
+    }
+
     public int getUserID() {
         return userID;
     }
@@ -62,18 +73,19 @@ public class ModelKhachHang {
         this.userID = userID;
     }
 
-    public String getLoaiKhachHang() {
+    public int getLoaiKhachHang() {
         return loaiKhachHang;
     }
 
-    public void setLoaiKhachHang(String loaiKhachHang) {
+    public void setLoaiKhachHang(int loaiKhachHang) {
         this.loaiKhachHang = loaiKhachHang;
     }
 
     @Override
     public String toString() {
-        return "ModelKhachHang{" + "MaKH=" + MaKH + ", tenKH=" + tenKH + ", ngayThamGia=" + ngayThamGia + ", doanhSo=" + doanhSo + ", userID=" + userID + ", loaiKhachHang=" + loaiKhachHang + '}';
+        return "ModelKhachHang{" + "MaKH=" + MaKH + ", tenKH=" + tenKH + ", ngayThamGia=" + ngayThamGia + ", doanhSo=" + doanhSo + ", diemTichLuy=" + diemTichLuy + ", userID=" + userID + ", loaiKhachHang=" + loaiKhachHang + '}';
     }
-      
-      
+
+    
+    
 }

@@ -23,9 +23,9 @@ ALTER TABLE NhanVien
 
 -- Tạo bảng SanPham
 create table SanPham(
-    MaSP varchar(10) primary key,
+    MaSP int primary key,
     TenSP varchar(50) not null, 
-    Gia int,
+    Gia float,
     MaNCC int,             
     TrangThai bit(1)
 );
@@ -69,7 +69,7 @@ create table NhaCungCap(
 
 -- Tạo bảng HoaDon
 create table HoaDon(
-    MaHD varchar(10) primary key not null,
+    MaHD int primary key not null,
     NgayLapHD date not null,
     TrangThai bit(1) not null,
     Code_Voucher varchar(10),

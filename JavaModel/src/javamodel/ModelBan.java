@@ -5,12 +5,12 @@ package javamodel;
 public class ModelBan {
     private int SoBan ;
     private String ViTri ;
-    private String trangThai ;
+    private boolean trangThai ;
 
     public ModelBan() {
     }
 
-    public ModelBan(int SoBan, String ViTri, String trangThai) {
+    public ModelBan(int SoBan, String ViTri, boolean trangThai) {
         this.SoBan = SoBan;
         this.ViTri = ViTri;
         this.trangThai = trangThai;
@@ -32,13 +32,16 @@ public class ModelBan {
         this.ViTri = ViTri;
     }
 
-    public String getTrangThai() {
+    public boolean isTrangThai() {
         return trangThai;
     }
 
-    public void setTrangThai(String trangThai) {
+    public void setTrangThai(boolean trangThai) {
         this.trangThai = trangThai;
     }
-    
-    
+
+    @Override
+    public String toString() {
+        return "ModelBan{" + "SoBan=" + SoBan + ", ViTri=" + ViTri + ", trangThai=" + trangThai + '}';
+    }   
 }

@@ -1,25 +1,26 @@
 
 package javamodel;
 
+import java.sql.Date;
 
 public class ModelHoaDon {
     private int MaHD ;
+    private Date NgayLapHD ;
+    private String Code_Voucher;
+    private boolean trangThai;
     private int MaKH ;
     private int SoBan;
-    private String NgayLapHD ;
-    private String Code_Voucher;
-    private String trangThai;
 
     public ModelHoaDon() {
     }
 
-    public ModelHoaDon(int MaHD, int MaKH, int SoBan, String NgayLapHD, String Code_Voucher, String trangThai) {
+    public ModelHoaDon(int MaHD, Date NgayLapHD, String Code_Voucher, boolean trangThai, int MaKH, int SoBan) {
         this.MaHD = MaHD;
-        this.MaKH = MaKH;
-        this.SoBan = SoBan;
         this.NgayLapHD = NgayLapHD;
         this.Code_Voucher = Code_Voucher;
         this.trangThai = trangThai;
+        this.MaKH = MaKH;
+        this.SoBan = SoBan;
     }
 
     public int getMaHD() {
@@ -28,6 +29,30 @@ public class ModelHoaDon {
 
     public void setMaHD(int MaHD) {
         this.MaHD = MaHD;
+    }
+
+    public Date getNgayLapHD() {
+        return NgayLapHD;
+    }
+
+    public void setNgayLapHD(Date NgayLapHD) {
+        this.NgayLapHD = NgayLapHD;
+    }
+
+    public String getCode_Voucher() {
+        return Code_Voucher;
+    }
+
+    public void setCode_Voucher(String Code_Voucher) {
+        this.Code_Voucher = Code_Voucher;
+    }
+
+    public boolean isTrangThai() {
+        return trangThai;
+    }
+
+    public void setTrangThai(boolean trangThai) {
+        this.trangThai = trangThai;
     }
 
     public int getMaKH() {
@@ -46,34 +71,9 @@ public class ModelHoaDon {
         this.SoBan = SoBan;
     }
 
-    public String getNgayLapHD() {
-        return NgayLapHD;
-    }
-
-    public void setNgayLapHD(String NgayLapHD) {
-        this.NgayLapHD = NgayLapHD;
-    }
-
-    public String getCode_Voucher() {
-        return Code_Voucher;
-    }
-
-    public void setCode_Voucher(String Code_Voucher) {
-        this.Code_Voucher = Code_Voucher;
-    }
-
-    public String getTrangThai() {
-        return trangThai;
-    }
-
-    public void setTrangThai(String trangThai) {
-        this.trangThai = trangThai;
-    }
-
     @Override
     public String toString() {
-        return "ModelHoaDon{" + "MaHD=" + MaHD + ", MaKH=" + MaKH + ", SoBan=" + SoBan + ", NgayLapHD=" + NgayLapHD + ", Code_Voucher=" + Code_Voucher + ", trangThai=" + trangThai + '}';
+        return "ModelHoaDon{" + "MaHD=" + MaHD + ", NgayLapHD=" + NgayLapHD + ", Code_Voucher=" + Code_Voucher + ", trangThai=" + trangThai + ", MaKH=" + MaKH + ", SoBan=" + SoBan + '}';
     }
-    
     
 }

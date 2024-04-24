@@ -1,46 +1,22 @@
 
 package javamodel;
 
+import java.sql.Date;
 
 public class ModelDatBan {
-    private int MaDatBan ;
-    private String GioBatDau ;
-    private String GioKetThuc ;
     private int SoBan ;
     private int MaKH ;
-
+    private Date GioBatDau ;
+    private Date GioKetThuc ;
+    
+    
     public ModelDatBan() {
     }
 
-    public ModelDatBan(int MaDatBan, String GioBatDau, String GioKetThuc, int SoBan, int MaKH) {
-        this.MaDatBan = MaDatBan;
-        this.GioBatDau = GioBatDau;
-        this.GioKetThuc = GioKetThuc;
+    public ModelDatBan(int SoBan, int MaKH, Date GioBatDau, Date GioKetThuc) {
         this.SoBan = SoBan;
         this.MaKH = MaKH;
-    }
-
-    public int getMaDatBan() {
-        return MaDatBan;
-    }
-
-    public void setMaDatBan(int MaDatBan) {
-        this.MaDatBan = MaDatBan;
-    }
-
-    public String getGioBatDau() {
-        return GioBatDau;
-    }
-
-    public void setGioBatDau(String GioBatDau) {
         this.GioBatDau = GioBatDau;
-    }
-
-    public String getGioKetThuc() {
-        return GioKetThuc;
-    }
-
-    public void setGioKetThuc(String GioKetThuc) {
         this.GioKetThuc = GioKetThuc;
     }
 
@@ -60,10 +36,28 @@ public class ModelDatBan {
         this.MaKH = MaKH;
     }
 
+    public Date getGioBatDau() {
+        return GioBatDau;
+    }
+
+    public void setGioBatDau(Date GioBatDau) {
+        this.GioBatDau = GioBatDau;
+    }
+
+    public Date getGioKetThuc() {
+        return GioKetThuc;
+    }
+
+    public void setGioKetThuc(Date GioKetThuc) {
+        this.GioKetThuc = GioKetThuc;
+    }
+
     @Override
     public String toString() {
-        return "ModelDatBan{" + "MaDatBan=" + MaDatBan + ", GioBatDau=" + GioBatDau + ", GioKetThuc=" + GioKetThuc + ", SoBan=" + SoBan + ", MaKH=" + MaKH + '}';
+        return "ModelDatBan{" + "SoBan=" + SoBan + ", MaKH=" + MaKH + ", GioBatDau=" + GioBatDau + ", GioKetThuc=" + GioKetThuc + '}';
     }
+
+    
     
     
 }

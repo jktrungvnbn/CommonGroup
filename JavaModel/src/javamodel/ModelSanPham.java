@@ -7,12 +7,12 @@ public class ModelSanPham {
     private String tenSP ;
     private double Gia ; 
     private int MaNCC ;
-    private String trangThai ;
+    private boolean trangThai ;
 
     public ModelSanPham() {
     }
 
-    public ModelSanPham(int MaSP, String tenSP, double Gia, int MaNCC, String trangThai) {
+    public ModelSanPham(int MaSP, String tenSP, double Gia, int MaNCC, boolean trangThai) {
         this.MaSP = MaSP;
         this.tenSP = tenSP;
         this.Gia = Gia;
@@ -52,11 +52,11 @@ public class ModelSanPham {
         this.MaNCC = MaNCC;
     }
 
-    public String getTrangThai() {
+    public boolean getTrangThai() {
         return trangThai;
     }
 
-    public void setTrangThai(String trangThai) {
+    public void setTrangThai(boolean trangThai) {
         this.trangThai = trangThai;
     }
 

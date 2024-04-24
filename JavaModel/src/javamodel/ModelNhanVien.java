@@ -1,11 +1,12 @@
 
 package javamodel;
 
+import java.sql.Date;
 
 public class ModelNhanVien {
     private int MaNV;
     private String tenNV;
-    private String ngayVaoLam;
+    private Date ngayVaoLam;
     private String SDT;
     private String chucVu;
     private int userID ;
@@ -13,7 +14,7 @@ public class ModelNhanVien {
     public ModelNhanVien() {
     }
 
-    public ModelNhanVien(int MaNV, String tenNV, String ngayVaoLam, String SDT, String chucVu, int userID) {
+    public ModelNhanVien(int MaNV, String tenNV, Date ngayVaoLam, String SDT, String chucVu, int userID) {
         this.MaNV = MaNV;
         this.tenNV = tenNV;
         this.ngayVaoLam = ngayVaoLam;
@@ -38,11 +39,11 @@ public class ModelNhanVien {
         this.tenNV = tenNV;
     }
 
-    public String getNgayVaoLam() {
+    public Date getNgayVaoLam() {
         return ngayVaoLam;
     }
 
-    public void setNgayVaoLam(String ngayVaoLam) {
+    public void setNgayVaoLam(Date ngayVaoLam) {
         this.ngayVaoLam = ngayVaoLam;
     }
 
