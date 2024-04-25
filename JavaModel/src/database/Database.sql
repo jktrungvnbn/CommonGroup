@@ -25,9 +25,9 @@ ALTER TABLE NhanVien
 create table SanPham(
     MaSP int primary key,
     TenSP varchar(50) not null, 
-    Gia float,
-    MaNCC int,             
-    TrangThai bit(1)
+    Gia float,                
+    TrangThai bit(1),
+    MaNCC int
 );
 
 -- Thêm khóa ngoài trong bảng SanPham
@@ -124,8 +124,8 @@ ALter table DatBan
 
 -- Tạo bảng ChiTietHD
 create table ChiTietHD(
-    MaHD varchar(10)  not null,
-    MaSP varchar(10)  not null,
+    MaHD int  not null,
+    MaSP int  not null,
     SoLuong int not null		
 )
 
