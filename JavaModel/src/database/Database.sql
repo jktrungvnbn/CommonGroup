@@ -19,7 +19,7 @@ create table NhanVien(
 --Them khoa ngoai trong bảng NhanVien
 ALTER TABLE NhanVien
     ADD CONSTRAINT NV_ND FOREIGN KEY (UserID) 
-        REFERENCES NguoiDung(UserID)
+        REFERENCES NguoiDung(UserID);
 
 -- Tạo bảng SanPham
 create table SanPham(
@@ -33,7 +33,7 @@ create table SanPham(
 -- Thêm khóa ngoài trong bảng SanPham
 ALter table SanPham
     Add CONSTRAINT SP_NCC FOREIGN KEY (MaNCC)
-        REFERENCES NhaCungCap(MaNCC)
+        REFERENCES NhaCungCap(MaNCC);
 
 -- Tạo bảng KhachHang
 create table KhachHang(
@@ -44,19 +44,19 @@ create table KhachHang(
     DiemTichLuy int not null,
     UserID int not null,
     MaLKH int not null
-)
+);
 
 -- thêm khóa ngoài cho bảng KhachHang
 ALter table KhachHang
     Add CONSTRAINT KH_ND FOREIGN KEY (UserID)
         REFERENCES NguoiDung(UserID),
     Add CONSTRAINT Kh_LKH FOREIGN KEY (MaLKH)
-        REFERENCES LoaiKH(MaLKH)
+        REFERENCES LoaiKH(MaLKH);
 
 -- Tạo bảng LoaiKH
 create table LoaiKH(
     MaLKH int primary key not null
-)
+);
 
 -- tạo bảng NhaCungCap
 create table NhaCungCap(
@@ -75,7 +75,7 @@ create table HoaDon(
     Code_Voucher varchar(10),
     MaKH int not null,
     SoBan int
-)
+);
 
 -- Thêm kháo ngoài bảng HoaDon
 ALter table HoaDon
@@ -84,7 +84,7 @@ ALter table HoaDon
     Add CONSTRAINT HD_KH FOREIGN KEY (MaKH)
         REFERENCES KhachHang(MaKH),
     Add CONSTRAINT HD_B FOREIGN KEY (SoBan)
-        REFERENCES Ban(SoBan)
+        REFERENCES Ban(SoBan);
 
 -- tạo bảng voucher
 create table Voucher(
@@ -97,14 +97,14 @@ create table Voucher(
 
 -- Tạo khóa ngoài cho bảng Voucher
 ALter table Voucher
-    Add constraint V_PhanTram check (Phantram > 0 AND Phantram <= 100)
+    Add constraint V_PhanTram check (Phantram > 0 AND Phantram <= 100);
 
 -- Tạo bảng Ban
 create table Ban(
     SoBan int primary key not null,
     ViTri varchar(50) not null,
     TrangThai bit(1) not null
-)
+);
 
 -- tạo bảng Đặt bàn
 create table DatBan(
@@ -112,7 +112,7 @@ create table DatBan(
     MaKH int not null,
     GioBD datetime not null,
     GioKT datetime  not null 
-)
+);
 
 -- Tạo khóa chính, khóa ngoài cho bảng DatBan
 ALter table DatBan
@@ -120,14 +120,14 @@ ALter table DatBan
     Add CONSTRAINT DB_B FOREIGN KEY (SoBan)
         REFERENCES Ban(SoBan),
     Add CONSTRAINT DB_KH FOREIGN KEY (MaKH)
-        REFERENCES KhachHang(MaKH)
+        REFERENCES KhachHang(MaKH);
 
 -- Tạo bảng ChiTietHD
 create table ChiTietHD(
     MaHD int  not null,
     MaSP int  not null,
     SoLuong int not null		
-)
+);
 
 -- Tạo khóa chính, khóa ngoài cho bang CHiTietHD
 Alter table ChiTietHD
@@ -135,7 +135,7 @@ Alter table ChiTietHD
     Add CONSTRAINT CTHD_HD FOREIGN KEY (MaHD)
         REFERENCES HoaDon(MaHD),
     Add CONSTRAINT CTHD_SP FOREIGN KEY (MaSP)
-        REFERENCES SanPham(MaSP)
+        REFERENCES SanPham(MaSP);
 
 
 
