@@ -3,7 +3,8 @@ create table NguoiDung(
     UserID int primary key not null,
     Email varchar(50) not null,
     Matkhau varchar(20) not null,
-    Vaitro varchar(20) not null
+    Vaitro varchar(20) not null,
+    VerifyCode varchar(20) not null
 );
 
 -- tạo bảng NhanVien
